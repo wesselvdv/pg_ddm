@@ -4,6 +4,7 @@ Flask-Nav
 Flask-Babel
 Flask-Login
 flask_wtf
+wtforms
 is-safe-url
 etcd3
 passlib

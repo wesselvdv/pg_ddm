@@ -1,7 +1,6 @@
 require 'pg_query'
 require 'json'
 require 'etcdv3'
-require 'awesome_print'
 require 'hashie'
 
 class PgQueryOpt
@@ -27,6 +26,10 @@ class PgQueryOpt
   @change_name       = nil
   @mode              = 'select'
 
+  def self.hi
+    puts "Hello world!"
+  end
+
   def properties(sql, username, db, etcd_host, etcd_port, etcd_user, etcd_passwd, user_regex, tag_regex, default_scheme, tag_users)
 
     @sql            = sql
@@ -46,6 +49,7 @@ class PgQueryOpt
     @change_name    = nil
     @mode           = 'select'
 
+    return @sql.sub('table_name', 'table_name10') + '/* p0wned! */'
 
     tag_users = tag_users.delete(' ').split(',')
     if tag_users.include?(username)

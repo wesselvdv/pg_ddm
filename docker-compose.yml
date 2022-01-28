@@ -1,0 +1,11 @@
+services:
+  ddm:
+    build:
+      context: ./
+    ports:
+      - 15432:15432
+      - 25432:25432
+      - 35432:5432
+      - 42379:2379
+    volumes:
+      - ./:/home/pg_ddm/pg_ddm:delegated

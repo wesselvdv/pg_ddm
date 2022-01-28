@@ -4,7 +4,7 @@ from flask import json
 from flask_babel import lazy_gettext
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField, HiddenField, validators
-from wtforms.fields.html5 import DateField, IntegerField, EmailField
+from wtforms.fields import DateField, IntegerField, EmailField
 from wtforms.validators import DataRequired
 from wtforms.widgets import PasswordInput
 
